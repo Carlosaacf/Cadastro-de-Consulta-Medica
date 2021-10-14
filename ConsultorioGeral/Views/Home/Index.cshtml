@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Consultório | Marque sua consulta ";
+}
+
+<body id="page-landing">
+    <div id="container">
+        <div class="logo-container">
+            <img src="~/img/Consultorio.png" alt="Logo">
+            <h2> Uma plataforma para marcar consultas </h2>
+        </div>
+        <img class="hero-image" src="~/img/personagem.png" alt="Plataforma de estudos">
+
+        <div class="buttons-container">
+            <a class="study"
+               asp-area="" asp-controller="Paciente" asp-action="Index">
+                Pacientes
+            </a>
+
+            <a class="give-classes"
+               asp-area="" asp-controller="Consulta" asp-action="Create">
+                Consultas
+            </a>
+            <a class="study"
+               asp-area="" asp-controller="MedicoView" asp-action="Create">
+                Médicos
+            </a>
+        </div>
+
+    </div>
+
+
+</body>
+

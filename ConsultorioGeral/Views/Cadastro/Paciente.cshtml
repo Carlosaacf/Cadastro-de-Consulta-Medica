@@ -1,0 +1,102 @@
+﻿@model Paciente
+@{
+    ViewData["Title"] = "Paciente";
+}
+
+<body id="page-give-classes">
+    <div id="container">
+        <header class="page-header">
+            <div class="top-bar-container">
+                <a href="/">
+                    <img src="~/img/back.svg">
+                </a>
+                <img src="images/logo.svg">
+            </div>
+
+            <div class="header-content">
+                <strong> Cadastro de Paciente </strong>
+                <p> Preencha corretamente todos os campos </p>
+
+            </div>
+        </header>
+
+        <main>
+
+            <form action="" id="create-class">
+
+                <fieldset>
+                    <legend> Seus dados </legend>
+
+                    <div class="input-block">
+                        <label asp-for="Nome" class="control-label"> Nome completo </label>
+                        <input asp-for="Nome" type="text" class="control-label" id="nomePaciente" name="nomePaciente"
+                               placeholder="Nome do Paciente" required>
+                    </div>
+
+                    <div class="input-block">
+                        <label asp-for="Cpf" class="control-label"> CPF <small>(somente números)</small> </label>
+                        <input asp-for="Cpf" id="cpf" class="control-label" type="number" required>
+                    </div>
+
+                    <div class="input-block">
+                        <label asp-for="Idade" class="control-label"> Idade  </label>
+                        <input asp-for="Idade" id="idade" type="number" required>
+                    </div>
+
+                    <div class="select-block">
+                        <label asp-for="Sexo" class="control-label"> Sexo </label>
+                        <select asp-for="Sexo" id="sexo" required>
+                            <option value=""> Selecione uma opção </option>
+                            <option value="F">Feminino</option>
+                            <option value="M">Masculino</option>
+                            <option value="O">Outro</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="input-block">
+                        <label asp-for="Telefone" class="control-label"> Telefone <small>(somente números)</small> </label>
+                        <input asp-for="Telefone" id="telefone" type="number" required>
+                    </div>
+
+                    <div class="input-block">
+                        <label asp-for="Email" class="control-label"> Email  </label>
+                        <input asp-for="Email" id="email" type="email" required>
+                    </div>
+
+                    <div class="input-block">
+                        <label asp-for="Endereco" class="control-label"> Endereço  </label>
+                        <input asp-for="Endereco" id="endereco" required>
+                    </div>
+
+                    <div class="input-block">
+                        <label asp-for="Cep" class="control-label"> CEP </label>
+                        <input asp-for="Cep" id="cep" required>
+                    </div>
+
+
+                </fieldset>
+
+                <footer>
+
+                    <p>
+                        <img src="~/img/warning.svg" alt="aviso">
+                        Importante! <br>
+                        Preencha todos os dados
+                    </p>
+                    <div class="input-block">
+                        <input type="submit"
+                               class="btn btn-sucess"
+                               value="Finalizar cadastro" />
+                        <a asp-action="Index" class="btn btn-info">Retornar pacientes </a>
+                    </div>
+                </footer>
+            </form>
+
+        </main>
+
+
+
+    </div>
+</body>
