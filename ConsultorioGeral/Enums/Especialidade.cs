@@ -10,7 +10,7 @@ namespace ConsultorioGeral.Enums
     {
         Cardiologista = 1,
         Pediatra = 2,
-        Otorrinolaringologista = 3,
+        Ginecologista = 3,
         [Display(Name = "Clínico Geral")]
         ClinicoGeral = 4,
     }
